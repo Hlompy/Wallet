@@ -38,7 +38,6 @@ func (r *WalletRepository) UpdateBalance(
 
 	if err != nil {
 		if err == sql.ErrNoRows {
-			// 👉 СОЗДАЁМ КОШЕЛЁК
 			if amount < 0 {
 				return appErr.ErrWalletNotFound
 			}
