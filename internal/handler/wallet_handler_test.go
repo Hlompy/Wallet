@@ -44,7 +44,7 @@ func TestPostWallet_Success(t *testing.T) {
 	handler := New(mockService)
 
 	reqBody := walletRequest{
-		WalletID: "550e8400-e29b-41d4-a716-446655440000",
+		WalletID: "11111111-1111-1111-1111-111111111123",
 		OpType:   "DEPOSIT",
 		Amount:   1000,
 	}
