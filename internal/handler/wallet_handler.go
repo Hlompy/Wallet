@@ -17,10 +17,10 @@ type WalletService interface {
 }
 
 type Handler struct {
-	service WalletService // Изменено на интерфейс
+	service WalletService
 }
 
-func New(service WalletService) *Handler { // Изменено на интерфейс
+func New(service WalletService) *Handler {
 	return &Handler{service: service}
 }
 
