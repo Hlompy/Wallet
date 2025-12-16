@@ -7,7 +7,6 @@ import (
 	appErr "github.com/Hlompy/Wallet/internal/errors"
 )
 
-// MockWalletRepository имитирует репозиторий для тестирования
 type MockWalletRepository struct {
 	UpdateBalanceFunc func(ctx context.Context, walletID string, amount int64) error
 	GetBalanceFunc    func(ctx context.Context, walletID string) (int64, error)
