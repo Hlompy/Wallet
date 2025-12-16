@@ -6,17 +6,16 @@ import (
 	appErr "github.com/Hlompy/Wallet/internal/errors"
 )
 
-// WalletRepository определяет интерфейс репозитория
 type WalletRepository interface {
 	UpdateBalance(ctx context.Context, walletID string, amount int64) error
 	GetBalance(ctx context.Context, walletID string) (int64, error)
 }
 
 type WalletService struct {
-	repo WalletRepository // Изменено на интерфейс
+	repo WalletRepository
 }
 
-func New(repo WalletRepository) *WalletService { // Изменено на интерфейс
+func New(repo WalletRepository) *WalletService {
 	return &WalletService{repo: repo}
 }
 
